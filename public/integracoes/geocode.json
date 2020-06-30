@@ -1,0 +1,10 @@
+{
+  "nome": "Google Geo Code",
+  "link": "https://console.cloud.google.com/apis/dashboard",
+  "constantes": {
+    "Key Google Geo Code": {
+      "input": "text",
+      "column": "geocode"
+    }
+  }
+}

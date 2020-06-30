@@ -1,0 +1,29 @@
+#login-card {
+    padding: 0 15px;
+    border-radius: 3px;
+}
+
+#logoLogin {
+    margin: auto;
+    float: initial;
+    display: block;
+}
+
+#loginbtn {
+    border-radius: 3px;
+    margin: auto;
+    float: initial;
+    display: block;
+    padding: 10px 50px;
+}
+
+.abcRioButtonContents > span {
+    font-size: 0;
+}
+
+span[id^=not_signed_]:before, span[id^=connected]:before {
+    content: 'google login';
+    padding-right: 100px;
+    padding-left: 7px;
+    font-size: 13px;
+}

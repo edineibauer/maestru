@@ -1,0 +1,56 @@
+{
+    background: #eeeeee;
+}
+
+.dev-nav {
+    z-index: 21;
+    top: inherit;
+    padding-bottom:45px;
+    border-top: solid 1px #dddddd;
+    overflow: hidden;
+}
+
+.menu-dashboard-lista {
+    width: 450px !important;
+    overflow: hidden;
+    height: 34px
+}
+
+#list-entity {
+    overflow: hidden;
+}
+
+.dashboard-main {
+    margin-left: 200px
+}
+
+.dev-nav::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+::-webkit-scrollbar-button {
+    background: #aaa;
+}
+
+.dash-version {
+    position: fixed;
+    top: 52px;
+    right: 3px;
+    color: #999;
+    font-size: .8em
+}

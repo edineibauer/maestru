@@ -1,0 +1,11 @@
+{
+  "title": "Login",
+  "subtitle": "faça login para continuar",
+  "type": "page",
+  "setor": "0",
+  "redirect": "dashboard",
+  "css": ["w3", "core/backgroundThemeWave"],
+  "templates": ["wavesBottom"],
+  "header": false,
+  "navbar": false
+}

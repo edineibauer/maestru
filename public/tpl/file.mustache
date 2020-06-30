@@ -1,0 +1,46 @@
+<div class='col margin-bottom padding-tiny relative {{#form.cols}}s{{form.cols}} {{/form.cols}}{{#form.colm}}m{{form.colm}} {{/form.colm}}{{#form.coll}}l{{form.coll}} {{/form.coll}}'>
+    <div class="col parent-input relative {{form.class}}" {{form.atributos}} {{#form.style}}style="{{form.style}}"{{/form.style}}>
+        <span class="col">
+            <div class="left align-left formLabel no-select">{{nome}} {{#required}}<sup class="color-text-red"><b>*</b></sup>{{/required}}</div>
+            <span class="rest input-message color-text-red padding-left padding-left" style="font-size: 12px;padding-top: 6px;" rel="{{column}}"></span>
+        </span>
+        <div class="col align-right info-container" style="margin-top: -19px;font-size: 12px;" rel="{{column}}">
+            <span class="right align-right color-text-gray"  rel="{{column}}">
+                <span class="input-info">{{valueLenght}}</span>{{#size}}/{{size}}{{/size}}
+            </span>
+        </div>
+        <div class="col radius border-top" style="min-height: 100px">
+            {{#allow.empty}}
+                <h3>Defina Os tipos de Arquivos Aceitos</h3>
+            {{/allow.empty}}
+            {{^allow.empty}}
+
+                <div class="col file_gallery padding-8">
+                    {{^disabled}}
+                        <div class="col padding-small file-more {{#isFull}}hide{{/isFull}}" style="width: auto; min-width: 200px">
+                            <label for="{{formIdentificador}}-{{column}}" class="card pointer radius align-center pointer hover-shadow transition-easy padding-64 font-xlarge" style="height: 170px">
+                                Selecione
+                            </label>
+                        </div>
+                    {{/disabled}}
+
+                    {{#value}}
+                        {{> file_source}}
+                    {{/value}}
+
+                </div>
+
+                <input name="file" class="hide formCrudInput" type="file"
+                       id="{{formIdentificador}}-{{column}}"
+                       data-format="source"
+                       data-column="{{column}}"
+                       data-parent="{{parent}}"
+                       rel="{{formIdentificador}}"
+                       {{#multiples}}multiple{{/multiples}}
+                        {{#minimo}} min="{{minimo}}" {{/minimo}}
+                        {{#size}} max="{{size}}" {{/size}}
+                       accept="{{#allow.options}}.{{valor}},{{/allow.options}}"/>
+            {{/allow.empty}}
+        </div>
+    </div>
+</div>

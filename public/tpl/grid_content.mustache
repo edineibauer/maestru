@@ -1,0 +1,60 @@
+<tr id="row-{{entity}}-{{id}}" style="border: none;">
+    {{#fields}}
+        <td class="padding-16{{^show}} hide{{/show}} {{class}}" rel="{{column}}" style="{{^db_status}}background: rgba(239, 243, 178, 0.5);{{/db_status}}{{style}}">
+            {{#first}}
+                <label class="left pointer">
+                    <input type="checkbox"{{#checked}} checked="checked"{{/checked}} class="table-select"
+                           rel="{{id}}" data-id="{{identificador}}" style="margin: 14px 30px 20px 0"/>
+                    <span class="td-value">{{{value}}}</span>
+                </label>
+            {{/first}}
+            {{^first}}
+                <span class="td-value">{{{value}}}</span>
+            {{/first}}
+        </td>
+    {{/fields}}
+
+    <td class="tableActions no-select relative{{^permission}} disabled" title="Sem Permissão{{/permission}}"
+            style="{{^db_status}}background: rgba(239, 243, 178, 0.5);{{/db_status}}width: {{^button.status.have}}170px;{{/button.status.have}}{{#button.status.have}}225px;{{/button.status.have}}">
+        <div class="right padding-small padding-top table-data-option pointer hide s-show" data-delete="{{button.delete}}" data-edit="{{button.update}}" data-status="{{button.status.have}}" data-statusactive="{{button.status.status}}" data-entity="{{entity}}" data-sync="{{db_status}}" rel="{{id}}" data-rel="{{identificador}}"><i class="material-icons">more_vert</i></div>
+        <div class="col s-hide">
+            {{#button.delete}}
+                <button rel="{{id}}" data-id="{{identificador}}"
+                        class="btn-grid-delete right btn-floating color-white color-hover-text-red hover-shadow opacity hover-opacity-off">
+                    <i class="material-icons">delete</i>
+                </button>
+            {{/button.delete}}
+
+            {{#button.update}}
+                <button data-id="{{id}}"
+                        class="right btn-floating color-white hover-shadow opacity hover-opacity-off btn-table-edit"
+                        rel="{{identificador}}">
+                    <i class="material-icons">edit</i>
+                </button>
+            {{/button.update}}
+
+            {{#button.status.have}}
+                <label class="right" style="height: 40px;">
+                    <div class="switch switch-squad" style="margin:0 7px 0 0">
+                        <input type="checkbox" class="switch-status-table switchCheck"
+                               data-status="{{button.status.status}}"
+                               data-entity="{{entity}}" data-id="{{id}}"
+                               rel="{{identificador}}"
+                               {{#button.status.status}}checked='checked'{{/button.status.status}}
+                        />
+                        <div class="slider"></div>
+                    </div>
+                </label>
+            {{/button.status.have}}
+
+            {{^db_status}}
+                {{#online}}
+                    <button rel="{{id}}" data-id="{{identificador}}" title="enviar este registro"
+                            class="btn-grid-sync right btn-floating color-white color-hover-text-blue hover-shadow opacity hover-opacity-off">
+                        <i class="material-icons">sync_problem</i>
+                    </button>
+                {{/online}}
+            {{/db_status}}
+        </div>
+    </td>
+</tr>

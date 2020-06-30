@@ -1,0 +1,31 @@
+<div class='col margin-bottom padding-tiny relative {{#form.cols}}s{{form.cols}} {{/form.cols}}{{#form.colm}}m{{form.colm}} {{/form.colm}}{{#form.coll}}l{{form.coll}} {{/form.coll}}'>
+    <div class="col parent-input relative {{form.class}}" {{#form.style}}style="{{form.style}}"{{/form.style}}>
+        <label class="col">
+            <span class="col align-left formLabel no-select">{{nome}} {{#required}}<sup class="color-text-red"><b>*</b></sup>{{/required}}</span>
+            <textarea
+                    data-format="{{format}}"
+                    class="formCrudInput{{#disabled}} disabled{{/disabled}}"
+                    {{#disabled}}disabled="disabled"{{/disabled}}
+                    autocomplete="off"
+                    id="{{column}}"
+                    data-column="{{column}}"
+                    data-parent="{{parent}}"
+                    rows="3"
+                    rel="{{formIdentificador}}"
+                    {{#allow.regexp}}pattern="{{allow.regexp}}"{{/allow.regexp}}
+                {{#minimo}} minlength="{{minimo}}" {{/minimo}}
+                {{#size}} maxlength="{{size}}" {{/size}}
+                {{#disabled}} disabled='disabled' {{/disabled}}
+                {{#required}} required="required" {{/required}}
+                {{form.atributos}}
+            >{{value}}</textarea>
+            <span class="input-bar"></span>
+            <div class="col info-container" style="margin-top: -19px;font-size: 12px;" rel="{{column}}">
+                <span class="right align-right color-text-gray"  rel="{{column}}">
+                    <span class="input-info">{{valueLenght}}</span>{{#size}}/{{size}}{{/size}}
+                </span>
+                <span class="rest input-message color-text-red padding-right" rel="{{column}}"></span>
+            </div>
+        </label>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+{{#users}}
+    <div class="col padding-right" style="width: 241px">
+        <div class="col card">
+            <header class="col color-gray-light" style="height: 106px;">
+                <h1 class="col padding-left font-large">{{ user }}</h1>
+
+                <div class="col" style="cursor: default;">
+                    <div title="menu" class="padding-small left"
+                         style="padding-left: 12px!important; padding-right: 12px!important;">
+                        <i class="material-icons">menu</i>
+                    </div>
+                    <div title="ler" class="padding-small left padding-right">
+                        <i class="material-icons">chrome_reader_mode</i>
+                    </div>
+                    <div title="criar" class="padding-small left">
+                        <i class="material-icons">edit</i>
+                    </div>
+                    <div title="atualizar" class="padding-small left">
+                        <i class="material-icons">cached</i>
+                    </div>
+                    <div title="excluir" class="padding-small left" style="padding-left: 12px!important;">
+                        <i class="material-icons">delete</i>
+                    </div>
+                </div>
+            </header>
+            {{#entitys}}
+                <div class="col" style="height: 38.4px;">
+                    <div class="font-medium col stripp" rel="{{entity}}">
+                        {{#permissoes}}
+                            <input type="checkbox" class="left margin-left allow-menu-session"
+                                {{#checked}} checked="checked"{{/checked}}
+                                   data-entity="{{entity}}"
+                                   data-tipo="{{tipo}}"
+                                   data-user="{{id}}"
+                            />
+                        {{/permissoes}}
+                    </div>
+                </div>
+            {{/entitys}}
+        </div>
+    </div>
+{{/users}}

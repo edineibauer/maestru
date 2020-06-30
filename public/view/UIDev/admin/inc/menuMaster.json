@@ -1,0 +1,30 @@
+[
+  {
+    "icon": "settings",
+    "title": "Configurações",
+    "action": "page",
+    "lib": "dev-ui",
+    "file": "UIDevConfiguracoes"
+  },
+  {
+    "icon": "assignment_turned_in",
+    "title": "Permissões",
+    "action": "page",
+    "lib": "dev-ui",
+    "file": "UIDevPermissoes"
+  },
+  {
+    "icon": "settings_input_component",
+    "title": "Integrações",
+    "action": "page",
+    "lib": "dev-ui",
+    "file": "UIDevIntegracoes"
+  },
+  {
+    "icon": "format_paint",
+    "title": "Tema",
+    "action": "page",
+    "lib": "dev-ui",
+    "file": "UIDevTema"
+  }
+]

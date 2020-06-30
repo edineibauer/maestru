@@ -1,0 +1,11 @@
+{
+  "title": "Esqueci a Senha",
+  "subtitle": "restauração da senha",
+  "type": "page",
+  "setor": "0",
+  "redirect": "index",
+  "css": ["w3", "core/backgroundThemeWave"],
+  "templates": ["wavesBottom"],
+  "header": false,
+  "navbar": false
+}

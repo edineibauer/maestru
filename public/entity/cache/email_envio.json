@@ -1,0 +1,1103 @@
+{
+  "1": {
+    "format": "title",
+    "type": "varchar",
+    "nome": "Nome Destinat\u00e1rio",
+    "column": "nome_destinatario",
+    "size": "127",
+    "minimo": "false",
+    "key": "title",
+    "group": "",
+    "unique": "false",
+    "default": "",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": "",
+      "validate": ""
+    },
+    "form": {
+      "input": "input",
+      "type": "text",
+      "cols": "12",
+      "colm": "6",
+      "coll": "",
+      "class": "padding-tiny",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "2"
+  },
+  "2": {
+    "format": "email",
+    "type": "varchar",
+    "nome": "Email Destinat\u00e1rio",
+    "column": "email_destinatario",
+    "size": "127",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "false",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": "",
+      "validate": "email"
+    },
+    "form": {
+      "input": "input",
+      "type": "email",
+      "cols": "12",
+      "colm": "6",
+      "coll": "",
+      "class": "padding-tiny",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "1"
+  },
+  "4": {
+    "format": "text",
+    "type": "varchar",
+    "nome": "Assunto",
+    "column": "assunto",
+    "size": "false",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "false",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": "",
+      "validate": ""
+    },
+    "form": {
+      "input": "input",
+      "type": "text",
+      "cols": "12",
+      "colm": "9",
+      "coll": "",
+      "class": "padding-tiny",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "3"
+  },
+  "5": {
+    "format": "textarea",
+    "type": "varchar",
+    "nome": "Mensagem",
+    "column": "mensagem",
+    "size": "4095",
+    "minimo": "false",
+    "key": "description",
+    "group": "",
+    "unique": "false",
+    "default": "false",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": "",
+      "validate": ""
+    },
+    "form": {
+      "input": "textarea",
+      "type": "text",
+      "cols": "12",
+      "colm": "12",
+      "coll": "",
+      "class": "padding-tiny",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "8"
+  },
+  "6": {
+    "format": "source",
+    "type": "json",
+    "nome": "Imagem Capa",
+    "column": "imagem_capa",
+    "size": "1",
+    "minimo": "false",
+    "key": "source",
+    "group": "",
+    "unique": "false",
+    "default": "",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": [
+        {
+          "option": "png",
+          "name": "png"
+        },
+        {
+          "option": "jpg",
+          "name": "jpg"
+        },
+        {
+          "option": "jpeg",
+          "name": "jpeg"
+        },
+        {
+          "option": "gif",
+          "name": "gif"
+        },
+        {
+          "option": "bmp",
+          "name": "bmp"
+        },
+        {
+          "option": "tif",
+          "name": "tif"
+        },
+        {
+          "option": "tiff",
+          "name": "tiff"
+        },
+        {
+          "option": "psd",
+          "name": "psd"
+        },
+        {
+          "option": "svg",
+          "name": "svg"
+        }
+      ],
+      "validate": ""
+    },
+    "form": {
+      "input": "file",
+      "type": "text",
+      "cols": "12",
+      "colm": "6",
+      "coll": "",
+      "class": "padding-tiny",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "6"
+  },
+  "7": {
+    "format": "url",
+    "type": "varchar",
+    "nome": "Link do Bot\u00e3o",
+    "column": "link_do_botao",
+    "size": "254",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "^https?:\\\/\\\/",
+      "options": "",
+      "validate": ""
+    },
+    "form": {
+      "input": "input",
+      "type": "text",
+      "cols": "12",
+      "colm": "6",
+      "coll": "",
+      "class": "padding-small",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "10"
+  },
+  "8": {
+    "format": "text",
+    "type": "varchar",
+    "nome": "Texto do Bot\u00e3o",
+    "column": "texto_do_botao",
+    "size": "false",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": "",
+      "validate": ""
+    },
+    "form": {
+      "input": "input",
+      "type": "text",
+      "cols": "12",
+      "colm": "6",
+      "coll": "",
+      "class": "padding-small",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "9"
+  },
+  "12": {
+    "format": "datetime",
+    "type": "datetime",
+    "nome": "Data de Envio",
+    "column": "data_de_envio",
+    "size": "false",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "datetime",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "^\\d{4}-\\d{2}-\\d{2}(\\s|T)\\d{2}:\\d{2}(:\\d{2})*$",
+      "options": "",
+      "validate": ""
+    },
+    "form": {
+      "input": "input",
+      "type": "datetime-local",
+      "cols": "12",
+      "colm": "3",
+      "coll": "",
+      "class": "padding-tiny",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "5"
+  },
+  "13": {
+    "format": "boolean",
+    "type": "tinyint",
+    "nome": "Email Aberto",
+    "column": "email_aberto",
+    "size": "1",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "0",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": [
+        {
+          "option": "0",
+          "name": "não"
+        },
+        {
+          "option": "1",
+          "name": "sim"
+        }
+      ],
+      "validate": ""
+    },
+    "form": {
+      "input": "switch",
+      "type": "text",
+      "cols": "6",
+      "colm": "2",
+      "coll": "",
+      "class": "padding-tiny disabled",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "16"
+  },
+  "14": {
+    "format": "boolean",
+    "type": "tinyint",
+    "nome": "Email Clicado",
+    "column": "email_clicado",
+    "size": "1",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "0",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": [
+        {
+          "option": "0",
+          "name": "não"
+        },
+        {
+          "option": "1",
+          "name": "sim"
+        }
+      ],
+      "validate": ""
+    },
+    "form": {
+      "input": "switch",
+      "type": "text",
+      "cols": "6",
+      "colm": "2",
+      "coll": "",
+      "class": "padding-tiny disabled",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "17"
+  },
+  "15": {
+    "format": "boolean",
+    "type": "tinyint",
+    "nome": "Email Entregue",
+    "column": "email_entregue",
+    "size": "1",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "0",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": [
+        {
+          "option": "0",
+          "name": "n\u00e3o"
+        },
+        {
+          "option": "1",
+          "name": "sim"
+        }
+      ],
+      "validate": ""
+    },
+    "form": {
+      "input": "switch",
+      "type": "text",
+      "cols": "6",
+      "colm": "2",
+      "coll": "",
+      "class": "padding-tiny disabled",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "15"
+  },
+  "16": {
+    "format": "information",
+    "type": "varchar",
+    "nome": "Separa\u00e7\u00e3o",
+    "column": "separacao",
+    "size": "100",
+    "minimo": "false",
+    "key": "information",
+    "group": "",
+    "unique": "false",
+    "default": "",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": "",
+      "validate": ""
+    },
+    "form": {
+      "input": "span",
+      "type": "text",
+      "cols": "12",
+      "colm": "",
+      "coll": "",
+      "class": "",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "13"
+  },
+  "17": {
+    "format": "source",
+    "type": "json",
+    "nome": "Background",
+    "column": "background",
+    "size": "1",
+    "minimo": "false",
+    "key": "source",
+    "group": "",
+    "unique": "false",
+    "default": "",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": [
+        {
+          "option": "png",
+          "name": "png"
+        },
+        {
+          "option": "jpg",
+          "name": "jpg"
+        },
+        {
+          "option": "jpeg",
+          "name": "jpeg"
+        },
+        {
+          "option": "gif",
+          "name": "gif"
+        },
+        {
+          "option": "bmp",
+          "name": "bmp"
+        },
+        {
+          "option": "tif",
+          "name": "tif"
+        },
+        {
+          "option": "tiff",
+          "name": "tiff"
+        },
+        {
+          "option": "psd",
+          "name": "psd"
+        },
+        {
+          "option": "svg",
+          "name": "svg"
+        }
+      ],
+      "validate": ""
+    },
+    "form": {
+      "input": "file",
+      "type": "text",
+      "cols": "12",
+      "colm": "6",
+      "coll": "",
+      "class": "padding-tiny",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "7"
+  },
+  "18": {
+    "format": "status",
+    "type": "tinyint",
+    "nome": "Email Enviado",
+    "column": "email_enviado",
+    "size": "1",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "0",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": [
+        {
+          "option": "0",
+          "name": "desativado"
+        },
+        {
+          "option": "1",
+          "name": "ativado"
+        }
+      ],
+      "validate": ""
+    },
+    "form": {
+      "input": "switch",
+      "type": "text",
+      "cols": "6",
+      "colm": "2",
+      "coll": "",
+      "class": "padding-tiny",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "14"
+  },
+  "19": {
+    "format": "boolean",
+    "type": "tinyint",
+    "nome": "Email Spam",
+    "column": "email_spam",
+    "size": "1",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "0",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": [
+        {
+          "option": "0",
+          "name": "n\u00e3o"
+        },
+        {
+          "option": "1",
+          "name": "sim"
+        }
+      ],
+      "validate": ""
+    },
+    "form": {
+      "input": "switch",
+      "type": "text",
+      "cols": "6",
+      "colm": "2",
+      "coll": "",
+      "class": "padding-tiny disabled",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "18"
+  },
+  "20": {
+    "format": "boolean",
+    "type": "tinyint",
+    "nome": "Email Error",
+    "column": "email_error",
+    "size": "1",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "0",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": [
+        {
+          "option": "0",
+          "name": "n\u00e3o"
+        },
+        {
+          "option": "1",
+          "name": "sim"
+        }
+      ],
+      "validate": ""
+    },
+    "form": {
+      "input": "switch",
+      "type": "text",
+      "cols": "6",
+      "colm": "2",
+      "coll": "",
+      "class": "padding-tiny disabled",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "19"
+  },
+  "21": {
+    "format": "source",
+    "type": "json",
+    "nome": "Anexos",
+    "column": "anexos",
+    "size": "40",
+    "minimo": "false",
+    "key": "source",
+    "group": "",
+    "unique": "false",
+    "default": "",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": [
+        {
+          "option": "png",
+          "name": "png"
+        },
+        {
+          "option": "jpg",
+          "name": "jpg"
+        },
+        {
+          "option": "jpeg",
+          "name": "jpeg"
+        },
+        {
+          "option": "gif",
+          "name": "gif"
+        },
+        {
+          "option": "bmp",
+          "name": "bmp"
+        },
+        {
+          "option": "tif",
+          "name": "tif"
+        },
+        {
+          "option": "tiff",
+          "name": "tiff"
+        },
+        {
+          "option": "psd",
+          "name": "psd"
+        },
+        {
+          "option": "svg",
+          "name": "svg"
+        },
+        {
+          "option": "mp4",
+          "name": "mp4"
+        },
+        {
+          "option": "avi",
+          "name": "avi"
+        },
+        {
+          "option": "mkv",
+          "name": "mkv"
+        },
+        {
+          "option": "mpeg",
+          "name": "mpeg"
+        },
+        {
+          "option": "flv",
+          "name": "flv"
+        },
+        {
+          "option": "wmv",
+          "name": "wmv"
+        },
+        {
+          "option": "mov",
+          "name": "mov"
+        },
+        {
+          "option": "rmvb",
+          "name": "rmvb"
+        },
+        {
+          "option": "vob",
+          "name": "vob"
+        },
+        {
+          "option": "3gp",
+          "name": "3gp"
+        },
+        {
+          "option": "mpg",
+          "name": "mpg"
+        },
+        {
+          "option": "mp3",
+          "name": "mp3"
+        },
+        {
+          "option": "aac",
+          "name": "aac"
+        },
+        {
+          "option": "ogg",
+          "name": "ogg"
+        },
+        {
+          "option": "wma",
+          "name": "wma"
+        },
+        {
+          "option": "mid",
+          "name": "mid"
+        },
+        {
+          "option": "alac",
+          "name": "alac"
+        },
+        {
+          "option": "flac",
+          "name": "flac"
+        },
+        {
+          "option": "wav",
+          "name": "wav"
+        },
+        {
+          "option": "pcm",
+          "name": "pcm"
+        },
+        {
+          "option": "aiff",
+          "name": "aiff"
+        },
+        {
+          "option": "ac3",
+          "name": "ac3"
+        },
+        {
+          "option": "txt",
+          "name": "txt"
+        },
+        {
+          "option": "doc",
+          "name": "doc"
+        },
+        {
+          "option": "docx",
+          "name": "docx"
+        },
+        {
+          "option": "dot",
+          "name": "dot"
+        },
+        {
+          "option": "dotx",
+          "name": "dotx"
+        },
+        {
+          "option": "dotm",
+          "name": "dotm"
+        },
+        {
+          "option": "ppt",
+          "name": "ppt"
+        },
+        {
+          "option": "pptx",
+          "name": "pptx"
+        },
+        {
+          "option": "pps",
+          "name": "pps"
+        },
+        {
+          "option": "potm",
+          "name": "potm"
+        },
+        {
+          "option": "potx",
+          "name": "potx"
+        },
+        {
+          "option": "pdf",
+          "name": "pdf"
+        },
+        {
+          "option": "xls",
+          "name": "xls"
+        },
+        {
+          "option": "xlsx",
+          "name": "xlsx"
+        },
+        {
+          "option": "xltx",
+          "name": "xltx"
+        },
+        {
+          "option": "rtf",
+          "name": "rtf"
+        },
+        {
+          "option": "rar",
+          "name": "rar"
+        },
+        {
+          "option": "zip",
+          "name": "zip"
+        }
+      ],
+      "validate": ""
+    },
+    "form": {
+      "input": "file",
+      "type": "text",
+      "cols": "12",
+      "colm": "",
+      "coll": "",
+      "class": "padding-tiny",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "datagrid": {
+      "relevant": "",
+      "gridm": "",
+      "gridl": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "indice": "11"
+  },
+  "22": {
+    "format": "text",
+    "type": "varchar",
+    "nome": "transmission_id",
+    "column": "transmission_id",
+    "size": "127",
+    "minimo": "false",
+    "key": "",
+    "group": "",
+    "unique": "false",
+    "default": "",
+    "update": "true",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": "",
+      "validate": ""
+    },
+    "form": "false",
+    "datagrid": {
+      "relevant": ""
+    },
+    "select": "",
+    "filter": "",
+    "value": "",
+    "input": "text",
+    "indice": "20"
+  },
+  "0": {
+    "format": "none",
+    "type": "int",
+    "nome": "id",
+    "column": "id",
+    "size": "",
+    "minimo": "false",
+    "key": "identifier",
+    "unique": "true",
+    "default": "false",
+    "update": "false",
+    "relation": "",
+    "allow": {
+      "regexp": "",
+      "options": "",
+      "validate": ""
+    },
+    "form": {
+      "input": "hidden",
+      "type": "text",
+      "cols": "12",
+      "colm": "",
+      "coll": "",
+      "class": "",
+      "style": "",
+      "atributos": "",
+      "template": "",
+      "fields": "",
+      "defaults": "",
+      "orientation": 0
+    },
+    "select": [],
+    "filter": []
+  }
+}

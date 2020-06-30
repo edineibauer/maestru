@@ -1,0 +1,373 @@
+<div class="responsive tableList col padding-24 s-padding-0" id="tableList-{{entity}}" data-entity="{{entity}}"
+     data-id="{{identificador}}">
+    <div class="col z-depth-2 grid-form-body radius border s-border-0 s-radius-0">
+        <div class="col no-select theme-d1 loadindTableSpace">
+            <div class="col padding-large padding-24 s-padding-medium s-padding-16" style="display: flow-root">
+                <a href="dashboard" data-animation="back"
+                   class="margin-bottom left color-white hover-shadow btn-floating">
+                    <i class="material-icons left">keyboard_arrow_left</i>
+                </a>
+                <button title="filtro"
+                        class="margin-bottom btn-floating left color-white hover-shadow btn-table-filter hide"
+                        rel="{{identificador}}">
+                    <i class="material-icons left">list</i>
+                </button>
+                {{#sync}}
+                    <button title="enviar todos ({{sync}})" onclick="syncDataBtn('{{entity}}')"
+                            class="margin-bottom btn-sync-all left btn-floating color-white color-hover-text-blue hover-shadow">
+                        <i class="material-icons">sync_problem</i>
+                    </button>
+                {{/sync}}
+
+                {{#novo}}
+                    <button class="btb radius right color-white hover-shadow btn-table-novo"
+                            style="margin: 4px 0 18px 0"
+                            rel="{{identificador}}">
+                        <i class="material-icons left">add</i><span class="left">Novo</span>
+                    </button>
+                {{/novo}}
+
+                <small class="margin-bottom total right"
+                       style="height:40px; padding:12px 10px 6px 10px">{{total}}</small>
+
+                <div class="left no-padding">
+                    <h4 class="left" style="padding: 5px 0 0 7px;">
+                        {{#goodName}}{{entity}}{{/goodName}}
+                    </h4>
+                </div>
+
+                <div class="col right padding-right sub-header-table s-hide">
+                    <div class="col sub-header-table-limit">
+                        <select class="col tableLimit font-small theme-text-aux theme-d1 theme-border-l" data-id="{{identificador}}">
+                            <option {{#limits.a}}selected="selected" {{/limits.a}}value="15">
+                                15
+                            </option>
+                            <option {{#limits.b}}selected="selected" {{/limits.b}}value="25">
+                                25
+                            </option>
+                            <option {{#limits.c}}selected="selected" {{/limits.c}}value="50">
+                                50
+                            </option>
+                            <option {{#limits.d}}selected="selected" {{/limits.d}}value="100">
+                                100
+                            </option>
+                            <option {{#limits.e}}selected="selected" {{/limits.e}}value="250">
+                                250
+                            </option>
+                            <option {{#limits.f}}selected="selected" {{/limits.f}}value="500">
+                                500
+                            </option>
+                            <option {{#limits.g}}selected="selected" {{/limits.g}}value="1000">
+                                1000
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="rest" style="margin-top: 2px">
+                        <input type="text" class="table-campo-geral theme-text-aux" autocomplete="off"
+                               data-id="{{identificador}}"
+                               placeholder="busca..."/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col theme-l1 padding-4 no-select">
+            <div class="col table-filter transition-easy" style="display: flow-root">
+                <div class="col padding-medium margin-bottom s-padding-4 s-padding-top s-margin-0 hide s-show">
+                    <div class="col right padding-right sub-header-table">
+                        <div class="col sub-header-table-limit">
+                            <select class="col tableLimit font-small theme-text-aux theme-l1"
+                                    data-id="{{identificador}}">
+                                <option {{#limits.a}}selected="selected" {{/limits.a}}value="15">
+                                    15
+                                </option>
+                                <option {{#limits.b}}selected="selected" {{/limits.b}}value="25">
+                                    25
+                                </option>
+                                <option {{#limits.c}}selected="selected" {{/limits.c}}value="50">
+                                    50
+                                </option>
+                                <option {{#limits.d}}selected="selected" {{/limits.d}}value="100">
+                                    100
+                                </option>
+                                <option {{#limits.e}}selected="selected" {{/limits.e}}value="250">
+                                    250
+                                </option>
+                                <option {{#limits.f}}selected="selected" {{/limits.f}}value="500">
+                                    500
+                                </option>
+                                <option {{#limits.g}}selected="selected" {{/limits.g}}value="1000">
+                                    1000
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="rest">
+                            <input type="text" class="table-campo-geral theme-text-aux" autocomplete="off"
+                                   data-id="{{identificador}}"
+                                   placeholder="busca..."/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="col right padding-4 hide adminShow" style="width: 50px">
+                        <label for="import-file-crud" title="Recuperar backup dos registros"
+                               class="right btn-floating hover-shadow opacity hover-opacity-off color-white">
+                            <i class="material-icons left theme-text-d">cloud_upload</i>
+                        </label>
+                        <input type="file" id="import-file-crud" rel="{{identificador}}" accept=".xlsx, .xls, .csv"
+                               class="hide"/>
+                    </div>
+                    <div class="col right padding-4 hide adminShow" style="width: 50px">
+                        <label id="export-file-crud" rel="{{identificador}}" title="Backup dos registros"
+                               class="right btn-floating hover-shadow opacity hover-opacity-off color-white">
+                            <i class="material-icons left theme-text-d">cloud_download</i>
+                        </label>
+                    </div>
+                    <div class="col right padding-4 hide adminShow" style="width: 70px">
+                        <label id="download-file-crud" rel="{{identificador}}" title="Download dos registros Csv"
+                               style="margin: 3px 15px 4px 0;"
+                               class="right btn radius hover-shadow opacity hover-opacity-off color-white">
+                            <i class="material-icons left theme-text-d">get_app</i>
+                        </label>
+                    </div>
+                    <div class="col right padding-4 hide adminShow" style="width: 70px">
+                        <label id="gerar-card-informativo" rel="{{identificador}}" title="Gerar Card Informativo"
+                               style="margin: 3px 15px 4px 0;"
+                               class="right btn radius hover-shadow opacity hover-opacity-off color-white">
+                            <i class="material-icons left theme-text-d">view_agenda</i>
+                        </label>
+                    </div>
+                    <div class="col right padding-4 hide adminShow" style="width: 70px">
+                        <label id="gerar-relatorio" rel="{{identificador}}" title="Gerar Relatório"
+                               style="margin: 3px 15px 4px 0;"
+                               class="right btn radius hover-shadow opacity hover-opacity-off color-white">
+                            <i class="material-icons left theme-text-d">assessment</i>
+                        </label>
+                    </div>
+                    <div class="rest table-filter-list padding-medium color-text-gray">
+                        <div class="font-light font-large left padding-small theme-text-aux">Filtros:</div>
+                        <button class="left theme-aux pointer hover-shadow radius padding-tiny padding-4 font-small btn-new-group"
+                                rel="{{identificador}}" data-rel="group"
+                                style="height: 26px;margin: 5px;">
+                            <i class="material-icons left font-large theme-text">add</i>
+                            <span class="left theme-text">filtro</span>
+                        </button>
+                        <button class="left disabled theme-aux pointer hover-shadow radius padding-tiny padding-4 font-small btn-new-group"
+                                rel="{{identificador}}" data-rel="inner_join" disabled="disabled"
+                                style="height: 26px;margin: 5px;">
+                            <i class="material-icons left font-large theme-text">add</i>
+                            <span class="left theme-text">grupo de inclusão</span>
+                        </button>
+                        <button class="left disabled theme-aux pointer hover-shadow radius padding-tiny padding-4 font-small btn-new-group"
+                                rel="{{identificador}}" data-rel="outer_join" disabled="disabled"
+                                style="height: 26px;margin: 5px;">
+                            <i class="material-icons left font-large theme-text">add</i>
+                            <span class="left theme-text">grupo de exlusão</span>
+                        </button>
+                        <label class="left padding-tiny padding-4 font-small" style="height: 36px;margin: 0 5px;">
+                            <select class="col font-small theme-text-aux theme-l1 aggroup padding-4 radius margin-0"
+                                    rel="{{identificador}}">
+                            </select>
+                        </label>
+                        <div class="left padding-tiny padding-4 font-small sum-aggroup hide" style="height: 36px;margin: 0 5px 10px;"></div>
+                    </div>
+                </div>
+
+                <div class="col padding-medium" id="filter-logic"></div>
+
+                <div class="modal-filter modal-filter-content hide">
+                    <div class="panel">
+                        <div class="display-container radius animate-top card-4" style="min-height: 215px;">
+                            <header class="container theme">
+                        <span class="theme-d3 padding-large opacity hover-opacity-off button margin-0 display-topright btn-close-modal"
+                              rel="{{identificador}}">
+                            &times;
+                        </span>
+                                <h4 class="padding-8">Novo Filtro</h4>
+                            </header>
+                            <div class="panel padding-24">
+                                <select class="col s12 m3 table-filter-columns" data-entity="{{entity}}" data-rel="0" rel="{{identificador}}"></select>
+                                <select class="col s12 m3 table-filter-operator hide">
+                                    <option disabled="disabled" class="color-text-gray" selected="selected"
+                                            value="">
+                                        regra...
+                                    </option>
+                                    <option value="contém">contém</option>
+                                    <option value="igual a">igual a</option>
+                                    <option value="diferente de">diferente de</option>
+                                    <option value="começa com">começa com</option>
+                                    <option value="termina com">termina com</option>
+                                    <option value="maior que">maior que</option>
+                                    <option value="maior igual a">maior igual a</option>
+                                    <option value="menor que">menor que</option>
+                                    <option value="menor igual a">menor igual a</option>
+                                    <option value="menor que hoje - X dias" class="hide dateOption">menor que hoje - X dias</option>
+                                    <option value="menor igual a hoje - X dias" class="hide dateOption">menor igual a hoje - X dias</option>
+                                    <option value="maior que hoje - X dias" class="hide dateOption">maior que hoje - X dias</option>
+                                    <option value="maior igual a hoje - X dias" class="hide dateOption">maior igual a hoje - X dias</option>
+                                </select>
+                                <input type="text" placeholder="valor..." style="margin-top: 1px"
+                                       class="col s12 m3 table-filter-value hide"/>
+
+                                <div class="col s12 m2 hide table-filter-btn">
+                                    <button title="aplicar filtro"
+                                            class="btb left radius color-white hover-shadow opacity hover-opacity-off btn-table-filter-apply"
+                                            rel="{{identificador}}">
+                                        <i class="material-icons left">done</i><span
+                                            class="left" style="padding-left: 5px">aplicar</span>
+                                    </button>
+                                </div>
+                                <div class="col padding-12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="table-all">
+            <thead>
+            <tr class="no-select">
+                {{#fields}}
+                    <th{{^show}} class="hide"{{/show}}{{#first}} style="width: 113px;min-width: 113px;"{{/first}} rel="{{column}}">
+                        {{#first}}
+                            <label class="left" style="margin-left: -8px;">
+                                <input type="checkbox" class="table-select-all" data-id="{{identificador}}"/>
+                            </label>
+                        {{/first}}
+                        <span class="pointer grid-order-by" data-column="{{column}}" rel="{{identificador}}">
+                        <span class="left padding-small padding-8">{{nome}}</span>
+                    </span>
+                    </th>
+                {{/fields}}
+                <th class="align-right relative" style="padding-right: 20px;padding-top: 14px;width: 115px;">
+                    <div class="right padding-left pointer table-header-option" data-rel="{{identificador}}"><i class="material-icons">more_vert</i></div>
+                    <div class="right s-hide">Ações</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody class="relative"></tbody>
+        </table>
+    </div>
+    <div class="col padding-12"></div>
+
+    <input type="hidden" class="table-pagina-{{entity}}" value="0" data-entity="{{entity}}"
+           id="table-pagina-{{entity}}"/>
+</div>
+
+<style>
+    .table-all {
+        border: none
+    }
+
+    .sub-header-table {
+        width: 100%;
+    }
+
+    .sub-header-table-limit {
+        width: 55px !important;
+        margin-right: 7px;
+        margin-top: 4px;
+    }
+
+    .sub-header-table-limit select {
+        margin-bottom: 0;
+        margin-top: 2px;
+    }
+
+    .table-campo-geral {
+        margin-bottom: 0;
+        font-size: 14px
+    }
+
+    .table-select-all {
+        margin: 15px 2rem 11px 0;
+    }
+
+    .table-filter {
+        height: 0;
+        overflow: hidden
+    }
+
+    .btn-new-filter {
+        margin: 2px 2px 2px 0;
+        height: 30px;
+    }
+
+    .btn-new-filter i {
+        margin-top: -1px;
+    }
+
+    .modal-filter-content {
+        position: absolute;
+        z-index: 99999;
+        left: 1% !important;
+        width: 98% !important;
+        top: 16px;
+    }
+
+    .modal-filter-content .display-container {
+        max-width: 1100px !important;
+        float: initial;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .modal-filter-content .display-container header {
+        padding-left: 12px;
+    }
+
+    .modal-filter-content .display-container h4 {
+        padding-bottom: 9px !important
+    }
+
+    .table-filter-columns, .table-filter-operator {
+        margin: 1px 0 7px 5px;
+    }
+
+    .table-filter-value {
+        padding-bottom: 5px;
+        margin: 0 0 7px 5px
+    }
+
+    .table-filter-btn {
+        margin: 2px 0 0 5px;
+    }
+
+    .pagination {
+        background: #f1f1f1;
+        border-top: solid 5px #ddd;
+    }
+
+    .pagination > .button {
+        padding: 0;
+    }
+
+    .tableImgTd {
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 96%
+    }
+
+    .activeBoolean {
+        height: 16px;
+        width: 16px;
+        background: #ffabab;
+        border-radius: 15px;
+        margin: 5px 10px 0;
+    }
+
+    .activeBoolean.active {
+        background: #62BAB2;
+    }
+
+    @media only screen and (min-width: 600px) {
+        .sub-header-table {
+            width: 250px !important;
+            padding-top: 0 !important;
+        }
+    }
+</style>

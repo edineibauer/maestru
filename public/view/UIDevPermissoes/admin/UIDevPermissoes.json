@@ -1,0 +1,8 @@
+{
+  "title": "Permissões",
+  "templates": [
+    "allow-entity-menu",
+    "allow-list-entity",
+    "allow-user-table"
+  ]
+}

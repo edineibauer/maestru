@@ -1,0 +1,15 @@
+{
+  "title": "Dashboard",
+  "js": ["coreGrid", "coreForm", "coreReport"],
+  "css": ["w3"],
+  "!setor": "0",
+  "offline": true,
+  "templates": [
+    "menuLi",
+    "menuCard",
+    "card",
+    "note",
+    "notificacoesEmpty",
+    "relatorios_card"
+  ]
+}

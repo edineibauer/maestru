@@ -1,0 +1,51 @@
+<div class='col margin-bottom padding-tiny relative {{#form.cols}}s{{form.cols}} {{/form.cols}}{{#form.colm}}m{{form.colm}} {{/form.colm}}{{#form.coll}}l{{form.coll}} {{/form.coll}}'>
+    <div class="col parent-input relative {{form.class}}" {{form.atributos}} {{#form.style}}style="{{form.style}}"{{/form.style}}>
+        <span class="col">
+            <div class="left align-left formLabel no-select">{{nome}} {{#required}}<sup class="color-text-red"><b>*</b></sup>{{/required}}</div>
+            <span class="rest input-message color-text-red padding-left padding-left" style="font-size: 12px;padding-top: 6px;" rel="{{column}}"></span>
+        </span>
+        <div class="col align-right info-container" style="margin-top: -19px;font-size: 12px;" rel="{{column}}">
+            <span class="right align-right color-text-gray"  rel="{{column}}">
+                <span class="input-info">{{valueLenght}}</span>{{#size}}/{{size}}{{/size}}
+            </span>
+        </div>
+        <div class="col radius border-top" style="min-height: 70px">
+            {{#allow.empty}}
+                <h3>Defina Os tipos de Arquivos Aceitos</h3>
+            {{/allow.empty}}
+            {{^allow.empty}}
+
+                <div class="col file_gallery padding-tiny padding-8">
+                    {{^disabled}}
+                        <label for="{{entity}}-{{column}}" style="margin: 0 0 7px;"
+                               class="file-more btn font-small left padding-small theme-d2 opacity hover-shadow hover-opacity-off radius{{#isFull}} hide{{/isFull}}">
+                            <i class="material-icons left font-large" style="padding-right: 7px">add</i>
+                            <span class="left" style="padding-right: 7px">Enviar</span>
+                        </label>
+                    {{/disabled}}
+
+                    {{#value}}
+                        {{> file_source}}
+                    {{/value}}
+
+                </div>
+
+                <input name="file" class="hide formCrudInput" type="file"
+                       id="{{entity}}-{{column}}"
+                       data-format="source_list"
+                       data-column="{{column}}"
+                       data-parent="{{parent}}"
+                       data-entity="{{entity}}"
+                       rel="{{formIdentificador}}"
+                       {{#multiples}}multiple{{/multiples}}
+                        {{#minimo}} min="{{minimo}}" {{/minimo}}
+                        {{#size}} max="{{size}}" {{/size}}
+                       accept="{{#allow.options}}.{{valor}},{{/allow.options}}"/>
+            {{/allow.empty}}
+        </div>
+    </div>
+</div>
+
+<div class="hide">
+
+</div>
